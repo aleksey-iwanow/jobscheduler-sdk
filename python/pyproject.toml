@@ -1,0 +1,31 @@
+[build-system]
+requires = ["setuptools>=65", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "jobscheduler-task-sdk"
+version = "0.1.0"
+description = "Language-neutral JobScheduler protocol runner and Python task SDK"
+readme = "README.md"
+requires-python = ">=3.11"
+license = { file = "LICENSE" }
+authors = [{ name = "JobScheduler contributors" }]
+keywords = ["jobscheduler", "tasks", "workflow"]
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3 :: Only",
+  "Operating System :: OS Independent",
+]
+
+[project.urls]
+Repository = "https://github.com/aleksey-iwanow/jobscheduler-sdk"
+Documentation = "https://github.com/aleksey-iwanow/jobscheduler-sdk#readme"
+
+[project.scripts]
+jobscheduler-python-runner = "scheduler_sdk.runner:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+scheduler_sdk = ["py.typed"]

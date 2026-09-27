@@ -1,0 +1,26 @@
+{
+  "name": "@ahell/jobscheduler-sdk",
+  "version": "0.1.0",
+  "description": "TypeScript task SDK for the JobScheduler protocol",
+  "repository": { "type": "git", "url": "git+https://github.com/aleksey-iwanow/jobscheduler-sdk.git", "directory": "typescript" },
+  "homepage": "https://github.com/aleksey-iwanow/jobscheduler-sdk#readme",
+  "license": "MIT",
+  "type": "module",
+  "engines": { "node": ">=20" },
+  "files": ["dist", "README.md", "LICENSE"],
+  "exports": {
+    ".": { "types": "./dist/index.d.ts", "default": "./dist/index.js" }
+  },
+  "bin": { "jobscheduler-runner": "./dist/runner.js" },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "test": "npm run build && node --test tests/runner.test.mjs",
+    "prepack": "npm run build"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "typescript": "^5.0.0"
+  },
+  "publishConfig": { "access": "public" }
+}
