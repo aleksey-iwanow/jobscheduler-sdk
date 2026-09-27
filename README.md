@@ -137,5 +137,3 @@ JobScheduler запускает runner отдельно для чтения ка
 stdin, в Docker — через `TASK_REQUEST_B64`. Runner возвращает один JSON-ответ
 через stdout; логи идут в stderr. Результаты зависимостей передаются в
 `upstream`. Подробный формат — в [protocol/README.md](protocol/README.md).
-
-Инструкция для владельца пакетов по публикации — в [PUBLISHING.md](PUBLISHING.md).
